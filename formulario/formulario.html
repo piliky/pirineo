@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta charset="UTF-8"></meta>
+		<title>Contacto PirineAndo</title>
+		<link rel="icon" href="../imagenes/favicon.jpg" sizes="16x16" />
+	</head>
+
+    <body>
+        
+        <header>
+            <h1 align="center">Descubre el Pirineo Central</h1>
+			<p align="center"> <em>Recopilación de experiencias ruteras, gastronómicas y naturalistas</em></p>
+			<nav>
+				<a href="../index.html">Inicio</a>|
+			</nav>
+        </header>
+
+        <article>
+            <form action="procesa_formulario.php" method="GET"> <!-- se pasan los datos por la URL-->
+                <fieldset>
+                        <legend>Datos Personales</legend>
+                            <p><label for="nombre">Nombre: </label>
+                            <input id="nombre" name="nombre" type="text" placeholder="Escriba su nombre" size="20"/><br><br>
+                                                       
+                            <label for="apellido">Apellido:</label>
+                            <input id="apellido" name="apellido" type="text" placeholder="Escriba sus apellidos" size="40"/><br><br>
+                                                        
+                            <label for="mail">Correo:</label>   
+                            <input id="correo" name="correo"  type="email" value="minombre@midomino.com"  minlength="10" required/>
+                            </p>
+                            
+                            <label>Género:</label>
+                            <input id="masculino" name="genero" type="radio" value="M">  
+                                <label for="masculino">M</label>
+                            <input id="femenino" name="genero" type="radio" value="F">
+                                <label for="femenino">F</label>
+                            <input id="otro" name="genero" type="radio" value="Otro">
+                                <label for="femenino">Otro</label>
+                </fieldset> 
+                <fieldset>
+                        <legend>Intereses</legend>
+                            <p>
+                            <label>Flora:</label>
+                            <input type="checkbox" id="arboles" name="flora" value="arboles">
+                                <label for="arboles">Árboles</label>
+                            <input type="checkbox" id="flores" name="flora" value="flores">
+                                <label for="flores">Flores</label>
+                            <input type="checkbox" id="frutos" name="flora" value="frutos">
+                                <label for="frutos">Frutos Silvestres</label>
+                            </p>
+                            <p>
+                            <label>Rutas senderistas:</label>
+                            <select id="rutas" name="rutas">
+                                <option value="familia">Familiares</option>
+                                <option value="amigos">Amigos</option>
+                                <option value="ascencion">Ascensiones</option>
+                                <option value="alpinismo">Rutas alpinas</option>
+                                <option value="otras">Otras</option>
+                            </select>
+                            </p>
+                            <p>                         
+                            <label for="comida">Gastro:</label>
+                            <input list="comida" name="comida" id="comidas" >
+
+                            <datalist id="comida" >
+                                <option value="Chuletón"></option>
+                                <option value="Huevos fritos"></option>
+                                <option value="Migas"></option>
+                                <option value="Chuletas de cordero"></option>
+                                <option value="Ensalada aragonesa"></option>
+                            </datalist>    
+                            </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Comentarios</legend>
+                    <label for="comentario"></label>
+                    <textarea id="comentario" name="comentario" rows="10" cols="60" placeholder="Indicanos otras sugerencias"></textarea>
+                </fieldset>
+                <p>
+                <label for="ip">La IP desde la que será enviada su respuesta es:</label>
+                <input type="text" id="ip" name="ip" value="192.168.0.x" size="11" readonly disabled>
+                </p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+
+            </form>
+        </article>
+        <hr>
+        <footer>
+            <p align="center"><em>Pilar Molina Roman - 2022</em></p>
+        </footer>
+
+    </body>
+</html>
